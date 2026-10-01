@@ -1,0 +1,50 @@
+/* Cursor-only styling: no circle, click interception, or changes to page controls. */
+.wyattel-cursor-layer { display: none; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) and (forced-colors: none) {
+  html.wyattel-cursor-active,
+  html.wyattel-cursor-active body,
+  html.wyattel-cursor-active body * { cursor: none !important; }
+
+  .wyattel-cursor-layer {
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .wyattel-cursor-layer[data-visible="true"] { opacity: 1; }
+  .wyattel-cursor-layer * { pointer-events: none; }
+  .wyattel-cursor-pointer { position: absolute; top: 0; left: 0; width: 0; height: 0; }
+  .wyattel-cursor-pointer svg {
+    position: absolute;
+    display: none;
+    overflow: visible;
+    fill: #f2eee7;
+    stroke: #b99a5d;
+    stroke-width: 1.2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    filter: drop-shadow(0 1px 1px #0c1e34) drop-shadow(0 0 1px #0c1e34);
+    transition: scale .12s ease, fill .18s ease, stroke .18s ease;
+  }
+  /* Each glyph's hotspot stays exactly at the real pointer position. */
+  .wyattel-cursor-arrow { left: -1px; top: -1px; transform-origin: 1px 1px; }
+  .wyattel-cursor-hand { left: -10.5px; top: -1.5px; transform-origin: 10.5px 1.5px; }
+  .wyattel-cursor-text { left: -8px; top: -13px; transform-origin: 8px 13px; }
+  .wyattel-cursor-scroll { left: -11px; top: -16px; transform-origin: 11px 16px; }
+  .wyattel-cursor-grab { left: -14px; top: -16px; transform-origin: 14px 16px; }
+  .wyattel-cursor-layer[data-intent="default"] .wyattel-cursor-arrow,
+  .wyattel-cursor-layer[data-intent="interactive"] .wyattel-cursor-hand,
+  .wyattel-cursor-layer[data-intent="text"] .wyattel-cursor-text,
+  .wyattel-cursor-layer[data-intent="scroll"] .wyattel-cursor-scroll,
+  .wyattel-cursor-layer[data-intent="grab"] .wyattel-cursor-grab { display: block; }
+  .wyattel-cursor-pointer .wyattel-cursor-text { fill: none; stroke: #f2eee7; stroke-width: 1.7; }
+  .wyattel-cursor-wheel { fill: none; stroke: #0c1e34; stroke-width: 2; animation: wyattel-cursor-scroll-wheel .55s ease-in-out infinite alternate; }
+  .wyattel-cursor-layer[data-pressed="true"] svg { scale: .9; }
+  .wyattel-cursor-layer[data-held="true"] svg { fill: #dec68a; stroke: #f2eee7; scale: .86; }
+  .wyattel-cursor-layer[data-held="true"] .wyattel-cursor-text { fill: none; stroke: #dec68a; scale: 1; }
+  @keyframes wyattel-cursor-scroll-wheel { to { transform: translateY(3px); } }
+}

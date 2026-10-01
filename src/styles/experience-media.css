@@ -1,0 +1,22 @@
+/* All four cards share the same image frame and responsive sizing.
+   Copy panels use the original alternating overlap and spacing. */
+.experience-list .experience-image {
+  height: 630px;
+  aspect-ratio: auto;
+}
+
+.experience-list .experience-image img {
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .experience-list .experience-image {
+    height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-list .experience-image {
+    height: 420px;
+  }
+}

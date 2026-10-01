@@ -1,0 +1,206 @@
+/* Booking-only gallery: the form stays mounted while its panel slides away. */
+.booking-section .booking-modal-layout {
+  position: relative;
+  display: block;
+  --booking-preview-width: 39%;
+  --booking-form-width: 61%;
+}
+
+.booking-section .booking-suite-gallery {
+  position: absolute;
+  z-index: 1;
+  inset: 0 auto 0 0;
+  width: var(--booking-preview-width);
+  height: 100%;
+  background: #081a2d;
+  transition: width .65s cubic-bezier(.22, 1, .36, 1), height .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+.booking-section .booking-form-shell {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: var(--booking-form-width);
+  transform: none;
+  opacity: 1;
+  transition: transform .65s cubic-bezier(.22, 1, .36, 1), opacity .4s ease;
+}
+
+.booking-section .booking-modal--gallery-open .booking-suite-gallery { z-index: 3; width: 100%; }
+.booking-section .booking-modal--gallery-open .booking-form-shell { transform: translateX(100%); opacity: 0; pointer-events: none; }
+
+.booking-section .booking-gallery-intro {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  padding: inherit;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity .25s ease;
+}
+
+.booking-section .booking-modal--gallery-open .booking-gallery-intro { opacity: 0; }
+.booking-section .booking-suite-gallery .booking-visual-photo { animation: booking-gallery-photo-in .4s ease both; }
+.booking-section .booking-suite-gallery .booking-visual-wash { transition: opacity .4s ease; }
+.booking-section .booking-modal--gallery-open .booking-visual-wash {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(8, 26, 45, .75), transparent 28%, transparent 72%, rgba(8, 26, 45, .8));
+  pointer-events: none;
+}
+.booking-section .booking-modal--gallery-open .booking-visual-photo {
+  padding: 0;
+  object-fit: cover;
+  transform: none;
+}
+
+.booking-section .booking-gallery-expand-trigger {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+.booking-section .booking-gallery-suite-summary {
+  position: absolute;
+  right: 42px;
+  left: 42px;
+  bottom: 78px;
+  display: grid;
+  gap: 14px;
+}
+
+.booking-section .booking-gallery-suite-summary .booking-suite-preview {
+  position: static;
+  width: auto;
+}
+
+.booking-section .booking-gallery-hint {
+  margin: 0;
+  color: #fff;
+  font: 400 11px/1.5 Montserrat, sans-serif;
+  letter-spacing: .02em;
+  text-align: center;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+}
+
+.booking-section .booking-gallery-expand-trigger:focus-visible { outline: 2px solid #d9c28d; outline-offset: -5px; }
+.booking-section .booking-gallery-expand-trigger[hidden],
+.booking-section .booking-gallery-controls[hidden] { display: none; }
+
+.booking-section .booking-gallery-controls { position: absolute; z-index: 4; inset: 0; pointer-events: none; animation: booking-gallery-controls-in .4s ease both; }
+.booking-section .booking-gallery-header { position: absolute; top: 26px; right: 80px; left: 28px; display: flex; align-items: center; gap: 24px; pointer-events: auto; }
+.booking-section .booking-gallery-heading { position: absolute; left: 50%; width: 50%; transform: translateX(-50%); text-align: center; }
+.booking-section .booking-gallery-heading > span { display: block; margin-bottom: 5px; color: #d9c28d; font: 600 7px/1.4 Montserrat, sans-serif; letter-spacing: .18em; }
+.booking-section .booking-gallery-heading h2 { margin: 0; color: #fff; font: 400 32px/1.1 'Cormorant Garamond', serif; letter-spacing: -.02em; }
+
+.booking-section .booking-gallery-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  gap: 10px;
+  margin: 0;
+  border: 1px solid rgba(217, 194, 141, .45);
+  background: rgba(8, 26, 45, .8) !important;
+  color: #fff !important;
+  font: 600 8px/1.2 Montserrat, sans-serif;
+  letter-spacing: .12em;
+}
+
+.booking-section .booking-gallery-back-button { min-height: 42px; padding: 10px 14px; border-radius: 4px; }
+.booking-section .booking-gallery-back-button > span { font-size: 18px; line-height: 1; }
+.booking-section .booking-gallery-previous-button,
+.booking-section .booking-gallery-next-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 15px;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  color: #fff !important;
+  font: 400 37px/1 'Cormorant Garamond', serif;
+  letter-spacing: 0;
+  text-shadow: 0 1px 7px rgba(0, 0, 0, .35);
+}
+.booking-section .booking-gallery-back-button:hover { border-color: #d9c28d; }
+.booking-section .booking-gallery-back-button:focus-visible,
+.booking-section .booking-gallery-previous-button:focus-visible,
+.booking-section .booking-gallery-next-button:focus-visible { outline: 2px solid #d9c28d; outline-offset: 4px; }
+.booking-section .booking-gallery-navigation button:disabled { opacity: .4; cursor: default; }
+
+.booking-section .booking-gallery-footer {
+  position: absolute;
+  right: 32px;
+  bottom: 27px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+  pointer-events: auto;
+}
+
+.booking-section .booking-gallery-caption { display: block; min-width: 0; }
+.booking-section .booking-gallery-caption > span { color: #d9c28d; font: 600 9px/1.4 Montserrat, sans-serif; letter-spacing: .2em; }
+.booking-section .booking-gallery-caption p { margin: 7px 0 0; color: #d5e0e9; font: 400 17px/1.25 'Cormorant Garamond', serif; letter-spacing: 0; }
+.booking-section .booking-gallery-navigation { position: absolute; inset: 0; pointer-events: none; }
+.booking-section .booking-gallery-navigation button { position: absolute; top: 50%; transform: translateY(-50%); pointer-events: auto; }
+.booking-section .booking-gallery-previous-button { left: 28px; }
+.booking-section .booking-gallery-next-button { right: 28px; }
+.booking-section .booking-modal--gallery-open .modal-close,
+.booking-section .booking-modal--gallery-open .modal-close:hover,
+.booking-section .booking-modal--gallery-open .modal-close:focus-visible { z-index: 60; border-color: rgba(217, 194, 141, .45); background: #081a2d !important; color: #fff !important; }
+
+@keyframes booking-gallery-photo-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes booking-gallery-controls-in { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 900px) {
+  .booking-section .booking-modal-layout { --booking-preview-width: 100%; --booking-form-width: 100%; --booking-preview-height: 220px; }
+  .booking-section .booking-suite-gallery { bottom: auto; height: var(--booking-preview-height); }
+  .booking-section .booking-form-shell { top: var(--booking-preview-height); }
+  .booking-section .booking-modal--gallery-open .booking-suite-gallery { height: 100%; }
+  .booking-section .booking-modal--gallery-open .booking-form-shell { transform: translateY(100%); }
+  .booking-section .booking-gallery-suite-summary { right: 32px; left: auto; bottom: 38px; width: 210px; gap: 10px; }
+  .booking-section .booking-gallery-hint { font-size: 10px; line-height: 1.35; }
+}
+
+@media (max-width: 620px) {
+  .booking-section .booking-modal-layout { --booking-preview-height: 185px; }
+  .booking-section .booking-gallery-suite-summary { top: 58px; right: 24px; left: 24px; bottom: auto; width: auto; gap: 0; }
+  .booking-section .booking-gallery-header { top: 16px; right: 70px; left: 18px; flex-direction: column; align-items: flex-start; gap: 17px; }
+  .booking-section .booking-gallery-heading { position: static; width: auto; transform: none; text-align: left; }
+  .booking-section .booking-gallery-heading h2 { font-size: 28px; }
+  .booking-section .booking-gallery-back-button { min-height: 38px; padding: 8px 10px; font-size: 7px; }
+  .booking-section .booking-gallery-footer { right: 18px; bottom: 23px; left: 18px; gap: 12px; }
+  .booking-section .booking-gallery-caption p { font-size: 15px; }
+  .booking-section .booking-gallery-previous-button { left: 14px; }
+  .booking-section .booking-gallery-next-button { right: 14px; }
+  .booking-section .booking-gallery-previous-button,
+  .booking-section .booking-gallery-next-button { padding: 10px; font-size: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-section .booking-suite-gallery,
+  .booking-section .booking-form-shell,
+  .booking-section .booking-gallery-intro,
+  .booking-section .booking-visual-wash { transition: none; }
+  .booking-section .booking-suite-gallery .booking-visual-photo,
+  .booking-section .booking-gallery-controls { animation: none; }
+}
