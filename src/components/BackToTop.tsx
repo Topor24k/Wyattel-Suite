@@ -4,7 +4,7 @@ export default function BackToTop({ visible }: { visible: boolean }) {
   const returnToTop = () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     window.scrollTo({ top: 0, behavior: reduceMotion ? 'instant' : 'smooth' })
-    document.querySelector<HTMLAnchorElement>('.header-section a[href="#home"]')?.focus({ preventScroll: true })
+    document.querySelector<HTMLAnchorElement>('.header-section a[aria-label="Wyattel Suite home"]')?.focus({ preventScroll: true })
   }
 
   return (

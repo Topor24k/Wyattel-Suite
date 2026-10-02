@@ -4,11 +4,11 @@ import { Arrow } from './UI'
 export default function HeroSection() {
   return (
     <section className="hero hero-section" id="home">
-      <img src="/Pictures/Wyattel%20Hero%20Background.png" alt="Wyattel Suite exterior in Tacurong City" fetchpriority="high" decoding="async" />
+      <img src="/Pictures/Wyattel%20Hero%20Background.png" alt="Wyattel Suite exterior in Tacurong City" fetchPriority="high" decoding="async" />
       <div className="hero-wash"></div>
       <div className="hero-content reveal">
         <p>WYATTEL SUITE · TACURONG CITY</p>
-        <h1>STAY<br /><em>BEAUTIFULLY</em></h1>
+        <h1 tabIndex={-1} data-page-heading>STAY<br /><em>BEAUTIFULLY</em></h1>
         <a className="hero-cta" href="#welcome">DISCOVER YOUR STAY <Arrow /></a>
       </div>
       <div className="hero-meta" aria-label="Wyattel Suite highlights">

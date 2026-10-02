@@ -1,0 +1,29 @@
+.home-suites-more { padding: 25px 7vw 45px; text-align: center; background: #ead9d5; }
+.home-suites-more a { display: inline-flex; align-items: center; gap: 25px; border-bottom: 1px solid #9b8157; padding: 10px 0; font-size: 9px; letter-spacing: .14em; }
+.home-gallery-preview, .home-journal-preview { padding-block: 95px; }
+.home-gallery-heading, .home-journal-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 25px; margin-bottom: 35px; }
+.home-gallery-heading .overline, .home-journal-heading .overline, .home-experiences-copy .overline { color: #8c713f; }
+.home-gallery-heading h2, .home-journal-heading h2, .home-experiences-copy h2 { font: 400 clamp(44px,5vw,64px)/.95 'Cormorant Garamond',serif; margin: 0; letter-spacing: -.03em; }
+.home-gallery-link, .home-journal-link, .home-experiences-link { display: inline-flex; align-items: center; gap: 22px; flex-shrink: 0; border-bottom: 1px solid var(--gold); padding-bottom: 12px; font: 500 9px/1.5 Montserrat,sans-serif; letter-spacing: .13em; }
+.home-gallery-mosaic { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 16px; }
+.home-gallery-mosaic img { width: 100%; height: 330px; object-fit: cover; }
+.home-experiences-preview { display: grid; grid-template-columns: 1fr 1fr; background: var(--paper); }
+.home-experiences-photo img { width: 100%; height: 540px; object-fit: cover; display: block; }
+.home-experiences-copy { padding: 75px 7vw; align-self: center; }
+.home-experiences-copy h2 em { color: #718eac; }
+.home-experiences-copy > p:not(.overline) { max-width: 410px; font: 400 21px/1.5 'Cormorant Garamond',serif; margin-block: 30px; }
+.home-journal-preview .journal-story-grid { grid-template-columns: 1fr 1fr; }
+.wyattel-home-page .contact-section { min-height: 570px; }
+.wyattel-home-page .contact-section .contact-content { padding-block: 60px; }
+@media (max-width: 700px) {
+  .home-gallery-preview, .home-journal-preview { padding-block: 60px; }
+  .home-gallery-heading, .home-journal-heading { display: block; }
+  .home-gallery-link, .home-journal-link { margin-top: 25px; }
+  .home-gallery-mosaic { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .home-gallery-mosaic img { height: 190px; }
+  .home-gallery-mosaic img:first-child { grid-column: 1 / -1; height: 270px; }
+  .home-experiences-preview { grid-template-columns: 1fr; }
+  .home-experiences-photo img { height: 350px; }
+  .home-experiences-copy { padding: 45px 6vw; }
+  .home-journal-preview .journal-story-grid { grid-template-columns: 1fr; }
+}

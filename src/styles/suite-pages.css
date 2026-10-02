@@ -1,0 +1,44 @@
+.suite-directory-content { padding-block: 55px 95px; }
+.suite-detail-hero { position: relative; isolation: isolate; min-height: 580px; display: flex; align-items: flex-end; padding: 155px 7vw 65px; color: #fff; background: var(--navy); }
+.suite-detail-hero > img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.suite-detail-hero::after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg,rgba(8,25,43,.3),rgba(8,25,43,.83)); }
+.suite-detail-hero > div { width: min(1240px,100%); margin: auto; }
+.suite-detail-back { display: inline-flex; gap: 18px; font-size: 9px; letter-spacing: .13em; margin-bottom: 45px; }
+.suite-detail-hero h1 { font: 400 clamp(65px,8vw,106px)/.9 'Cormorant Garamond',serif; margin: 0; }
+.suite-detail-hero .overline { color: #dec68a; }
+.suite-detail-hero p:not(.overline) { font: 400 22px 'Cormorant Garamond',serif; }
+.suite-detail-body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 8vw; padding-block: 80px; }
+.suite-detail-description h2 { font: 400 57px/.98 'Cormorant Garamond',serif; margin: 0 0 26px; }
+.suite-detail-description > p:not(.overline) { font: 400 22px/1.5 'Cormorant Garamond',serif; }
+.suite-detail-facts { display: flex; flex-wrap: wrap; gap: 12px 25px; border-block: 1px solid rgba(20,42,69,.17); padding-block: 22px; font-size: 9px; letter-spacing: .12em; }
+.suite-detail-description .suite-detail-disclaimer, .suite-detail-disclaimer { font: 400 17px/1.6 'Cormorant Garamond',serif; color: #526170; }
+.suite-detail-enquiry { align-self: start; padding: 35px; background: var(--navy); color: var(--cream); }
+.suite-detail-enquiry h2 { font: 400 36px/1 'Cormorant Garamond',serif; }
+.suite-detail-enquiry > p:not(.overline) { font: 400 18px/1.5 'Cormorant Garamond',serif; color: #cfdae4; }
+.suite-detail-enquiry .overline { color: #dec68a; }
+.suite-detail-book { display: inline-flex; align-items: center; justify-content: space-between; gap: 22px; width: 100%; min-height: 48px; margin-top: 14px; padding: 15px; border: 1px solid var(--gold); background: transparent; color: #fff; font-size: 8px; letter-spacing: .1em; }
+.suite-detail-book:hover { border-color: #dec68a; }
+.suite-detail-planning { display: inline-flex; align-items: center; gap: 22px; margin-top: 22px; font-size: 8px; letter-spacing: .1em; }
+.suite-detail-gallery { padding-bottom: 75px; }
+.suite-detail-gallery-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.suite-detail-gallery-heading h2 { font: 400 48px/1 'Cormorant Garamond',serif; margin: 0; }
+.suite-detail-gallery-heading a { font-size: 9px; letter-spacing: .1em; }
+.suite-detail-photo-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.suite-detail-photo { position: relative; height: 330px; padding: 0; border: 0; background: var(--navy); color: #fff; overflow: hidden; }
+.suite-detail-photo img { width: 100%; height: 100%; object-fit: cover; }
+.suite-detail-photo > span { position: absolute; inset: auto 0 0; display: flex; align-items: center; justify-content: space-between; padding: 30px 20px 20px; background: linear-gradient(transparent,rgba(8,25,43,.8)); font-size: 9px; letter-spacing: .1em; }
+.suite-detail-related { padding-block: 60px 90px; border-top: 1px solid rgba(20,42,69,.15); }
+.suite-detail-related h2 { font: 400 47px/1 'Cormorant Garamond',serif; }
+.suite-detail-related > div { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-block: 25px 35px; }
+.suite-detail-related > div a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 20px; border-bottom: 1px solid var(--gold); font: 400 30px 'Cormorant Garamond',serif; }
+.suite-detail-related > a { font-size: 9px; letter-spacing: .1em; }
+@media (max-width: 700px) {
+  .suite-detail-body, .suite-detail-related > div { grid-template-columns: 1fr; }
+  .suite-detail-hero { min-height: 480px; padding-bottom: 45px; }
+  .suite-detail-hero h1 { font-size: 66px; }
+  .suite-detail-body { padding-block: 55px; gap: 35px; }
+  .suite-detail-description h2 { font-size: 45px; }
+  .suite-detail-photo-grid { grid-template-columns: 1fr; }
+  .suite-detail-photo { height: 330px; }
+  .suite-detail-gallery-heading { align-items: flex-start; flex-direction: column; }
+}

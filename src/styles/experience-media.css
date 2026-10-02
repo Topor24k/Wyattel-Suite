@@ -1,5 +1,9 @@
 /* All four cards share the same image frame and responsive sizing.
    Copy panels use the original alternating overlap and spacing. */
+.experience-list {
+  margin-top: 0;
+}
+
 .experience-list .experience-image {
   height: 630px;
   aspect-ratio: auto;

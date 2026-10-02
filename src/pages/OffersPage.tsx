@@ -1,0 +1,12 @@
+import React from 'react'
+import PageNote from '../components/PageNote'
+import { activeOffers } from '../data/offers'
+import { Arrow } from '../components/UI'
+
+export default function OffersPage({ onBook }: { onBook: (room?: string, note?: string) => void }) {
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Manila' })
+  const offers = activeOffers(today)
+  return <div className="offers-directory-page"><PageNote className="offers-page-note" eyebrow="CURRENT OFFERS" title="Good things are worth confirming." description={offers.length ? 'Explore our current hotel-approved offers. Contact the team to confirm availability and the arrangements for your stay.' : 'There are no confirmed promotional offers listed at the moment. Tell the team about your dates and plans for current availability and a personal quotation.'} selectable /><section className="offers-directory-content site-content-width">{offers.length ? <div className="offers-approved-grid">{offers.map(offer => <article key={offer.id}><img src={offer.image} alt={offer.title} /><div><p className="overline">{offer.starts} – {offer.ends}</p><h2>{offer.title}</h2><p>{offer.description}</p><ul data-selectable="true">{offer.inclusions.map(item => <li key={item}>{item}</li>)}</ul><p data-selectable="true">{offer.terms}</p><button className="offers-approved-enquire" onClick={() => onBook(undefined, `I would like to enquire about: ${offer.title}`)}>ENQUIRE ABOUT THIS OFFER <Arrow /></button></div></article>)}</div> : null}
+      <div className="offers-ideas-grid">{[{ title: 'A wedding beginning', text: 'Ask about a preparation room and photo-shoot arrangements for your wedding morning.', image: '/Pictures/Wyattel%20Suite%20Wedding.png', href: '/#contact' }, { title: 'Time with your people', text: 'Planning a family visit or a group celebration? Share your dates and the space you need.', image: '/Family%20Suite%20Images/Wyattel%20Suite%20Family%201.png', href: '/suites/family-suite' }, { title: 'Something at the table', text: 'Enquire about current dining options for your stay or a gathering.', image: '/Pictures/Wyattel%20Suite%20Filipino%20Menu.png', href: '/gallery?category=Dining' }].map(idea => <article key={idea.title}><div><img src={idea.image} alt={idea.title} loading="lazy" /></div><p className="overline">QUOTATION ON REQUEST · NOT A CONFIRMED PACKAGE</p><h3>{idea.title}</h3><p>{idea.text}</p><a className="offers-idea-link" href={idea.href}>LET’S EXPLORE <Arrow /></a></article>)}</div>
+    </section></div>
+}

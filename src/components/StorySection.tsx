@@ -13,7 +13,7 @@ export default function StorySection() {
         <h2>Made for life’s<br /><em>in-between moments.</em></h2>
         <p>Wyattel Suite was created as more than a place to sleep. It is a reassuring arrival, a restful night and an easy morning—an intimate base for every reason that brings you to Tacurong.</p>
         <p>Warm service and thoughtful essentials come together in spaces that are unpretentious, comfortable and quietly refined.</p>
-        <a className="line-link" href="#rooms">DISCOVER OUR ROOMS <Arrow /></a>
+        <a className="line-link" href="/suites">DISCOVER OUR ROOMS <Arrow /></a>
       </div>
     </section>
   )

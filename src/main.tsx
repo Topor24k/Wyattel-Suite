@@ -10,6 +10,16 @@ import './styles/contact-media.css'
 import './styles/scroll-navigation.css'
 import './styles/brand-cursor.css'
 import './styles/text-selection.css'
+import './styles/site-pages.css'
+import './styles/home-previews.css'
+import './styles/full-gallery.css'
+import './styles/suite-pages.css'
+import './styles/journal-pages.css'
+import './styles/planning-pages.css'
+import './styles/enquiry-pages.css'
+import './styles/page-notes.css'
+import './styles/suite-collection.css'
+import './styles/gallery-collection.css'
 
 createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

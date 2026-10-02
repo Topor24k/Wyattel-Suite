@@ -1,0 +1,21 @@
+import React from 'react'
+import PageNote from '../components/PageNote'
+import { hotelAddress, hotelFacebook, hotelMaps, hotelPhones } from '../data/site'
+import { Arrow } from '../components/UI'
+
+const questions = [
+  ['How do I request a room?', 'Choose your suite and connected stay dates in the booking form. An enquiry is not a confirmed booking. The team must confirm availability, current pricing, and your arrangements. If online sending is unavailable, open the prepared email draft and send it from your email app.'],
+  ['Can I request a one-day stay?', 'The form supports a single date or one connected range of dates. The hotel must confirm whether a day-use arrangement or overnight stay is available, and how charges are calculated.'],
+  ['What are the check-in and check-out times?', 'Official times have not been confirmed for this website. Ask the team before travelling, especially if you need early arrival, late departure, or wedding preparation access.'],
+  ['How many guests can stay in a suite?', 'Capacity depends on the room and the hotel’s approved arrangements. Share your group size and children’s ages with the team. The guest selector is an enquiry field, not a guarantee that a suite can accommodate that number.'],
+  ['What about payment, changes, and cancellation?', 'Request a written quotation and confirmation of deposits, accepted payment methods, cancellation terms, and change policies directly from the hotel before paying. No payment is taken by this website.'],
+  ['Can the hotel accommodate accessibility needs?', 'Describe any step-free access, bathroom, bed-height, or other requirements when enquiring. Ask the team to confirm the exact facilities and access arrangements; a suite name is not an accessibility guarantee.'],
+  ['Can I arrange dining or an event?', 'Contact the hotel by phone or Facebook. Share your occasion, date, estimated attendance, and menu requirements. Venue capacity, supplier access, inclusions, and pricing must be confirmed by the hotel.'],
+]
+export default function PlanStayPage({ onBook }: { onBook: () => void }) {
+  return <div className="plan-stay-page"><PageNote eyebrow="PLAN YOUR STAY" title="A little planning. A lighter stay." description="Find your way to Wyattel, explore our helpful FAQs, and get the details you need before arriving in Tacurong." className="planning-page-note" /><section className="plan-arrival-section site-content-width"><div><p className="overline">FIND YOUR WAY</p><h2>We’ll meet you in Tacurong.</h2><p className="plan-address" data-selectable="true">{hotelAddress}</p><a className="plan-directions" href={hotelMaps} target="_blank" rel="noreferrer">OPEN DIRECTIONS <Arrow /></a><div className="plan-phone-list">{hotelPhones.map(phone => <a key={phone.href} href={phone.href}>{phone.label}</a>)}</div><a className="plan-facebook" href={hotelFacebook} target="_blank" rel="noreferrer">VISIT WYATTEL ON FACEBOOK <Arrow /></a></div><img src="/Pictures/Wyattel%20Hero%20Background.png" alt="Wyattel building and entrance" loading="lazy" /></section>
+    <section className="plan-checklist-section site-content-width"><p className="overline">YOUR ARRIVAL CHECKLIST</p><h2>Before you set off.</h2><div className="plan-checklist-grid">{[['01', 'Your arrival', 'Confirm check-in/out times, your route, parking arrangements, and early or late access.'], ['02', 'Your room', 'Confirm guests, beds, current rates, inclusions, and any accessibility requirements.'], ['03', 'Your arrangements', 'Request written payment, cancellation, visitor, and event terms before confirming.']].map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p data-selectable="true">{text}</p></article>)}</div></section>
+    <section className="plan-faq-section site-content-width" id="faqs"><div><p className="overline">GOOD TO KNOW</p><h2>A few helpful answers.</h2></div><div>{questions.map(([question, answer]) => <details key={question}><summary>{question}<span aria-hidden="true">+</span></summary><p data-selectable="true">{answer}</p></details>)}</div></section>
+    <section className="plan-reservation-section"><p className="overline">THE NEXT STEP</p><h2>Let’s make it your stay.</h2><button className="plan-reservation-button" onClick={onBook}>REQUEST A STAY <Arrow /></button></section>
+  </div>
+}
