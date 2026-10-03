@@ -109,6 +109,21 @@ test('removed intros, enquiry sections, and favourites do not return to the acti
   assert.doesNotMatch(read('src/components/ExperienceSection.tsx') + read('src/pages/OffersPage.tsx'), /#event-enquiry|#dining-menu/)
 })
 
+test('homepage includes About and omits gallery and experience previews', async () => {
+  const Home = await loadComponent('src/pages/HomePage.tsx')
+  const html = renderToStaticMarkup(React.createElement(Home, { onBook() {}, onSuitePhotos() {} }))
+  assert.doesNotMatch(html, /home-gallery-preview|home-experiences-preview/)
+  assert.equal((html.match(/class="home-about-section"/g) || []).length, 1)
+  assert.match(html, /aria-labelledby="home-about-title"/)
+  assert.match(html, /ABOUT WYATTEL/)
+  assert.match(html, /href="\/our-story"/)
+  assert.ok(html.indexOf('home-about-section') < html.indexOf('rooms-section suites-section'))
+  assert.match(html, /home-journal-preview/)
+  const css = readFileSync('src/styles/suites-gallery.css', 'utf8')
+  assert.match(css, /\.wyattel-home-page \.rooms-section\.suites-section \{ padding-bottom: 0; \}/)
+  assert.match(css, /@media \(max-width: 600px\)\s*\{\s*\.wyattel-home-page \.rooms-section\.suites-section \{ padding-top: 0; \}/)
+})
+
 test('every non-home menu page uses one Offers-style note with its own selector', () => {
   const selectors = new Set()
   for (const page of ['Gallery', 'Suites', 'Journal', 'Experiences', 'PlanStay', 'Offers', 'Story']) {
@@ -121,6 +136,11 @@ test('every non-home menu page uses one Offers-style note with its own selector'
   }
   assert.equal(selectors.size, 7)
   assert.doesNotMatch(readFileSync('src/pages/HomePage.tsx', 'utf8'), /PageNote|offers-honest-note/)
+})
+
+test('menu logo centering stays independent of its entrance animation', () => {
+  const css = readFileSync('src/styles/site-pages.css', 'utf8')
+  assert.match(css, /\.site-menu-expanded \.menu-overlay-logo \{ left: 50%; translate: -50% 0; transform: none; \}/)
 })
 
 test('page notes render an accessible heading and description without a banner', async () => {

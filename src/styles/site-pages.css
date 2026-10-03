@@ -13,6 +13,8 @@
 .site-empty-state p { font: 400 19px/1.6 'Cormorant Garamond',serif; color: #51606f; }
 .site-main-inner :is(a,button,input,select,textarea,summary):focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
 .site-menu-expanded { overflow-y: auto; display: flex; flex-direction: column; justify-content: flex-start; padding: 115px 8vw 105px; }
+/* Keep horizontal centering independent of the entrance animation's transform. */
+.site-menu-expanded .menu-overlay-logo { left: 50%; translate: -50% 0; transform: none; }
 .site-menu-expanded nav { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 7vw; width: min(1100px,100%); min-width: 0; margin: auto; }
 .site-menu-expanded nav a { padding: 21px 0; grid-template-columns: 28px 1fr 20px; min-width: 0; }
 .site-menu-expanded nav a > span:not(:last-child) { font-size: clamp(25px,3.1vw,43px); line-height: 1.05; }

@@ -1,4 +1,8 @@
 /* Our Suites owns these selectors; booking-gallery styles stay independent. */
+.wyattel-home-page .rooms-section.suites-section { padding-bottom: 0; }
+@media (max-width: 600px) {
+  .wyattel-home-page .rooms-section.suites-section { padding-top: 0; }
+}
 .suites-section .suites-photo-card-trigger {
   position: absolute;
   z-index: 2;
