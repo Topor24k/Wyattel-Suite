@@ -1,93 +1,126 @@
 # Wyattel Suite
 
-React + TypeScript (strict) + Tailwind CSS v4 website with a focused homepage and
-separate suites, gallery, journal, dining/celebrations, offers, planning, and
-story pages.
+The official website and reservation-request system for **Wyattel Suite**, a hotel on the National Highway in Tacurong City, Sultan Kudarat, Philippines.
 
-## Run locally
+Guests can explore the suites, browse real hotel photography, plan their visit, and send a reservation or event enquiry straight to the hotel team. On phones the site works like a native app and can be installed to the home screen.
 
-```sh
-npm ci
-npm run dev        # local site + enquiry API
-npm run typecheck  # strict TypeScript
-npm test
-npm run build      # optimises images, type-checks, then bundles
+---
+
+## What the system does
+
+### For guests
+
+- **Explore the suites:** five suite types (Deluxe, Twin, Presidential, Matrimonial, Family), each with photos, listed rates, and highlights.
+- **Request a stay:** choose dates on a calendar, set the number of guests, pick a suite, and send the request in a few steps. No account or payment is needed.
+- **Browse the gallery:** the hotel, suites, wedding moments, and the Filipino dining menu, with a full-screen photo viewer.
+- **Dining and celebrations:** wedding preparation, events, and dining, each with a direct enquiry.
+- **Plan the visit:** directions, contact numbers, an arrival checklist, and answers to common questions.
+- **The Journal:** guides on choosing a suite, planning a wedding morning, and a first stay in Tacurong.
+- **Offers:** shows only promotions the hotel has approved, with clear dates; otherwise guests can request a personal quotation.
+
+### For the hotel
+
+- Reservation and event requests arrive **by email**, already summarised: dates, guests, suite, contact details, and notes.
+- Guests are always told a request is **an enquiry, not a confirmed booking**. The team confirms availability, rates, and arrangements personally.
+- If online sending is unavailable, the guest is given a ready-made email draft, a copyable summary, and the hotel's phone numbers, so no enquiry is lost.
+
+---
+
+## How a reservation request works
+
+```mermaid
+flowchart LR
+    A[Guest chooses dates,<br/>guests and suite] --> B[Enters contact details<br/>and agrees to be contacted]
+    B --> C{Request checked<br/>on the server}
+    C -- valid --> D[Email sent to the<br/>hotel via Resend]
+    D --> E[Guest sees<br/>'Enquiry submitted' + reference]
+    C -- sending unavailable --> F[Guest gets an email draft,<br/>copyable summary and phone numbers]
+    E --> G[Hotel team confirms<br/>availability and rate]
+    F --> G
 ```
 
-Routes use browser history. Vite supports direct page loads in development.
-For production, configure your host to serve `index.html` for page routes without
-rewriting image/assets or `/api/*` requests. `vercel.json` provides the Vercel
-SPA fallback, and `api/enquiry.js` is a Vercel Node.js function.
+Every request is checked twice: once in the browser, for instant feedback, and again on the server before anything is sent. That covers valid contact details, consent, a real suite, and connected future dates.
 
-## Enquiry delivery
+---
 
-Copy `.env.example` to an ignored `.env.local` and configure:
+## Experience and design
 
-- `VITE_ENQUIRY_EMAIL`: approved address for the optional user-sent email draft.
-  This value is public in the browser bundle; never put a secret here.
-- `RESERVATION_TO_EMAIL`: approved destination for server-sent enquiries.
-- `RESERVATION_FROM_EMAIL`: sender on an email-service-verified domain.
-- `RESEND_API_KEY`: server-only Resend API key. Never use a `VITE_` prefix.
+| Area | What it means |
+| --- | --- |
+| **Phone app experience** | Bottom tab bar (Home, Suites, Book, Gallery, More), app-style top bar with back buttons, swipeable photo cards, and bottom sheets that can be dragged down to close. Suite pages work like a booking app, with a pinned "Request this suite" bar. |
+| **Installable** | "Add to Home Screen" opens the site full-screen with its own Wyattel icon, like a native app. |
+| **Desktop** | Editorial layout with large photography, a hover-preview suite index, and a booking window whose suite photo expands into a full gallery. |
+| **Visual identity** | Navy, cream and gold taken from the hotel's own interiors, with Cormorant Garamond and Montserrat type. |
+| **Accessibility** | Meets WCAG AA colour contrast, works fully by keyboard (including the date calendar and photo viewers), has labelled form fields and screen-reader announcements, and respects "reduce motion" settings. |
+| **Performance** | Photos are automatically converted to responsive WebP, so the homepage image drops from 2.3 MB to about 24 KB on phones. Pages load the right image size for each screen. |
 
-Vite serves the local API in development. On Vercel, configure these environment
-variables in the deployment settings. Static-only hosting does not run the API.
-Without all server credentials, the form clearly says **not sent** and prepares
-an email draft or copyable enquiry. Guests must send drafts themselves.
-Only an accepted API response produces an enquiry-submitted status; it never
-claims the reservation is confirmed. Mail-provider acceptance is not a guarantee
-of inbox delivery.
+---
 
-The endpoint validates contact details, consent, room choices, connected future
-stay dates, and event details. It has a honeypot, payload limits, same-origin
-checks, a best-effort per-instance rate limit, and idempotency keys. Configure
-host-level abuse/rate-limit protections before public launch; the in-memory
-limiter is not shared across serverless instances. No live test emails are sent
-by the test suite.
+## Tech stack
 
-## Design system
+| Layer | Technology |
+| --- | --- |
+| **Frontend framework** | [React 18](https://react.dev) |
+| **Language** | [TypeScript 7](https://www.typescriptlang.org) (strict mode) |
+| **Build tool / dev server** | [Vite 6](https://vite.dev) |
+| **Styling** | [Tailwind CSS 4](https://tailwindcss.com), with a custom brand design system |
+| **Icons** | [Lucide](https://lucide.dev) |
+| **Typography** | Cormorant Garamond and Montserrat (Google Fonts) |
+| **Backend / API** | Serverless function on [Vercel](https://vercel.com) (Node.js) |
+| **Email delivery** | [Resend](https://resend.com) |
+| **Hosting** | Vercel |
+| **Image processing** | [sharp](https://sharp.pixelplumbing.com) (build-time WebP generation) |
+| **Installable app** | Web App Manifest with home-screen icons |
+| **Testing** | Node.js built-in test runner, with server rendering to check pages |
 
-All styling lives in `src/styles/tailwind.css`. Its `@theme` block defines the
-only colours available (porcelain navy, cream, gold, and a lacquer-red accent),
-the type scale, and motion timings; every text/background pairing is documented
-with its WCAG contrast ratio. Shared building blocks are in `src/components/ui/`
-(`Button`, `Eyebrow`, `Section`, `PageHeader`, `Picture`, `Logo`). Overlays use
-`src/hooks/useDialog.ts` for focus trapping, Escape, and focus return.
+---
 
-## Phone app experience
+## Security and privacy
 
-Below 768px the site behaves like a native app: a bottom tab bar (Home, Suites,
-Book, Gallery, More), an app-style top bar with back buttons and a title that
-appears as you scroll, swipeable card rails, and bottom sheets (booking and More)
-that can be dragged down to close. Suite pages swap the tab bar for a pinned
-request bar. Desktop layouts are unchanged.
+- **No payments or accounts.** The site never collects payment details or passwords.
+- **Secrets stay on the server.** The email-service key and the hotel's inbox address are server-only environment variables and never reach the browser.
+- **Spam and abuse protection.** The enquiry endpoint uses a hidden spam trap, size limits, same-site checks, rate limiting, and duplicate-submission protection.
+- **Honest content.** No invented reviews, discounts, policies, or "live availability" claims. Rates are shown as listed reference rates that the hotel confirms.
 
-The site is installable ("Add to Home Screen") through `public/manifest.webmanifest`
-and opens full-screen with safe-area padding for notched phones. Icons in
-`public/icons/` are generated from the wordmark by `node scripts/app-icons.mjs`.
-There is no offline mode (no service worker), so pages still need a connection.
+> The built-in rate limit is per server instance. Before a high-traffic launch, enable your host's abuse protection as well.
 
-## Photographs
+---
 
-Originals stay in `public/`. `npm run images` (also run by `npm run build`)
-writes responsive WebP copies to `public/optimized/` and a manifest to
-`src/data/imageManifest.json`; `<Picture>` serves the right size automatically.
-After adding or replacing a photo, run `npm run images` and commit both outputs.
-A photo missing from the manifest still renders from its original file.
+## Getting started
 
-Suites without their own photographs show a clearly labelled representative
-image until real photography is added to `src/data/suiteGalleries.js`.
+Requirements: **Node.js 20+** and npm.
 
-## Maintaining content
+```sh
+npm ci            # install dependencies
+npm run dev       # run the site and enquiry API locally
+npm test          # run the test suite
+npm run build     # optimise photos, type-check, and build for production
+```
 
-- `src/data.ts`: listed suite details (`rate` is a number in PHP per night).
-  Rates, capacity, accessibility, bed setup, and amenities must be approved by
-  the hotel before being presented as confirmed.
-- `src/data/photos.ts`: local hotel collection and captions. Logos are not photos.
-- `src/data/journal.ts`: original editorial planning guides, not testimonials.
-- `src/data/offers.ts`: only add approved, dated offers with clear terms. Unapproved,
-  future, or expired entries are not shown.
-- `src/pages/PlanStayPage.tsx`: FAQs. Unknown policies remain explicitly unconfirmed.
+To open the local site on a phone on the same Wi-Fi, run `npm run dev -- --host` and use the "Network" address it prints.
 
-Do not invent guest reviews, discounts, hotel policies, or claims of live availability.
-Publish guest stories only with permission and real source material.
+## Configuration
 
+Copy `.env.example` to `.env.local` (never committed) and fill in:
+
+| Variable | Purpose | Visibility |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Resend API key used to send enquiry emails | Server only, keep secret |
+| `RESERVATION_TO_EMAIL` | Hotel inbox that receives enquiries | Server only |
+| `RESERVATION_FROM_EMAIL` | Sender address on a domain verified with Resend | Server only |
+| `VITE_ENQUIRY_EMAIL` | Address used for the guest's fallback email draft | Public (visible in the browser) |
+
+Without the server variables the site still works, and enquiries fall back to the email draft.
+
+## Deployment
+
+The site deploys to **Vercel** from the `main` branch. Add the variables above under *Project → Settings → Environment Variables*. Vercel serves the pages and runs the enquiry API automatically.
+
+---
+
+## Content guidelines
+
+- Show only hotel-approved rates, capacities, policies, and offers. Anything unconfirmed is labelled as such.
+- Offers appear only while approved and within their dates.
+- Journal articles are planning guides, not testimonials. Publish guest stories only with permission.
+- Current suite photos are placeholders until new photography is taken. Suites without their own photos display a clearly labelled representative image.
