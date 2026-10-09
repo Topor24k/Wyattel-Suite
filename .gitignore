@@ -29,6 +29,7 @@ pnpm-debug.log*
 # Local editor and operating-system files
 .idea/
 .vscode/
+.claude/
 .DS_Store
 Thumbs.db
 Desktop.ini

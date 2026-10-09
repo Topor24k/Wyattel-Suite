@@ -1,0 +1,367 @@
+{
+  "/Deluxe%20Suite%20Images/Wyattel%20Suite%20Deluxe%201.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-1-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-1-960.webp"
+      },
+      {
+        "w": 1536,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-1-1536.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACXBs+6scOs4fn8AXgTUAPY4Ge95g5jyDD215vVAyMvDlNLzHB7vJyqUFIvrk/x4eut20yYWsj/sOeOYScYwcXEgSJax210udb9GPvpJlZwihlO32E8XzSj9bzrXqAnRZUrPJ1YE/ajstCRhesKIKzwZ+OzOhzdOlbK33rkWMDw2ngy3QB1fAAA="
+  },
+  "/Deluxe%20Suite%20Images/Wyattel%20Suite%20Deluxe%202.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-2-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-2-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-2-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAAAQBQCdASoYABIAPu1ur1IppiQiqAgBMB2JQBhQtaJAAI3nZKUgBeZz8ZTdmqHwgJUAAPC9lRi/Cr1WEJJOnv7JNj4jn18lJwGcVVa6vVQqXlDNKw3eyOHZEHZ7yFhqTUP2cwlmC5OYHYEo6F8WYyEj81kL/fBGQWoXPLCoJhO5GhATILpOWh6zPvkt1dqQT98xIknbGL1OIrgGoJRRdwt7iGT+tkPADp/ckHjNS7lZ4ABGIg+emSCtlb3AAA=="
+  },
+  "/Deluxe%20Suite%20Images/Wyattel%20Suite%20Deluxe%203.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-3-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-3-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/deluxe-suite-images/wyattel-suite-deluxe-3-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAACwBACdASoYABIAPu1qr1AppaQiqAqpMB2JZQCw7A8ebr/QR3RFDypoghWPttkAAP7u4IOztN3a+F1B0x7jxuFcdBlh6xLSOr5DaCBmFHaQHwgdyy9+eW7jZNJ7aRX4Y5KMhNX23aXPXNBxarj7Ewy3ZkTScQr4+sxsa6+rioMWZOCSnIjAHGH5zZPKZrZGEAhAVlcelTB/ff8PkAij3YAA"
+  },
+  "/Family%20Suite%20Images/Wyattel%20Suite%20Family%201.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-1-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-1-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-1-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoYABIAPu1orFCppaQiqAqpMB2JaAC06A9q97U1DqUY3IFAn6RhDUMkRhSOaADbwPVPK41GdqqLbXETFEIPaK1wJ7/sfAGpj+rHPZe6C9OR1QtQUauhc9YMZxjVGWoYRqhXbNNxivkj2jDKkl796qjc5M8GivK9UFAtuABVZl0U0xpMIqBSDEHMmtFH3bHGRuOS5jCaw7BhQEmTstoehzOuRjxHyNYZUlpNXb8AAAA="
+  },
+  "/Family%20Suite%20Images/Wyattel%20Suite%20Family%202.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-2-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-2-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-2-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAADQBACdASoYABIAPu1ur1IppiQiqAgBMB2JYwCw7BIz+Vtj+r2jIdHKVXnTiqW9IAD+hp4wdgrO45NSxg13WmfMFECSsD5AO+aPRXMpBI/JpOxNn91i2LWyMgVdmjKfLti5Cpgg+LlVFEENv0zY+puCHRhc1Wd4cUsuX7zGDPCAMsbLVObzNtVArkCBa32WsuIz40SUk0rH9FVWyqrkZhpycaGD4UgnwThQAAAA"
+  },
+  "/Family%20Suite%20Images/Wyattel%20Suite%20Family%203.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-3-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-3-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/family-suite-images/wyattel-suite-family-3-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAwBQCdASoYABIAPu1qrFEppaQiqAqpMB2JYgCdMt8Bh8qiYG2jDT25PXXXDlSJsqUuoAD48qM43Yox1hBkv+4gUsfajA07dylF1vOPiViYL3dvjHFn4tlpAIyQ8UJq9gLpejodRu8pLsDK+jYd7AmSRxqJOAQ+dNddaaEvss8vgdA72umOcZmLSdMQt1hur5FbvOjmJNsFiict3wrvbgsp1+DUHSe62H7ThW5YbMORRWcD9jPKqVARAAA="
+  },
+  "/Matrimonial%20Suite%20Images/Wyattel%20Suite%20Matrimonial%201.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-1-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-1-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-1-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtoAAABXRUJQVlA4IM4AAACQBQCdASoYABIAPu1qrVCppaQiqAqpMB2JagCdMxyEIkgAeNAInl5uEddgkoZBEdab6QDcAAD0BWgaQzPK0YpeFQb7z75HXmUWuZqE1ztK6bNAggrJQoHd2SoK+8RgwFy/hns8lB7NRh1C2PFDerE83FKOtRzBpo4ASBroHMGEpLy0BkkyogMdWEAzAj93tkb9gP0zGoBQpUBa7gAgG6DJDtU+N5sbTLjxt36AvB2hWr/Y0UlSjGi8PAzCk5zvV5mvOrFz5H1A/RGhL4AAAA=="
+  },
+  "/Matrimonial%20Suite%20Images/Wyattel%20Suite%20Matrimonial%202.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-2-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-2-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-2-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAQBQCdASoYABIAPu1qrVCppaQiqAqpMB2JQBBOAJQsc6qNK6oLXX/7qsN6DSrS8ywAAPo27heZ2/NZiwexilYQcB3HUUJz5TMZKA6f3oSgUXm1rd5+SPrcgKWB/d0WlzVvZVRZFfoZZT2zH4Utxk3DRGYfW7oR5FVAH6J1qZPErVet/jvYUDbtq03pnbnYJ3JqHVl0fEv7KjP2M0rxlAk1+gXFaGEr0hBTYTgt8PCpLj4Nqb8IS/wAAAA="
+  },
+  "/Matrimonial%20Suite%20Images/Wyattel%20Suite%20Matrimonial%203.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-3-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-3-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/matrimonial-suite-images/wyattel-suite-matrimonial-3-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAABwBACdASoYABIAPu1sq1EppaOiqAqpMB2JZQAAGK+9WfvIG6XkdOBvIjLNgAD9dFPRrOVw6v4sOpyQ4HOj120Ewi0tZd32QS/T/eRDZK5iTsDHZxmqWuf9yfpeihBaKJcbKNfNQNMmikEDENey2eVYrB0awA+4Npf6bpj9juT+IcEMBj0Nc7zbjQVMOKRLmDWdyIqTIAAAAA=="
+  },
+  "/Pictures/Wyattel%20Hero%20Background.png": {
+    "width": 1774,
+    "height": 887,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-hero-background-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-hero-background-960.webp"
+      },
+      {
+        "w": 1600,
+        "src": "/optimized/pictures/wyattel-hero-background-1600.webp"
+      },
+      {
+        "w": 1774,
+        "src": "/optimized/pictures/wyattel-hero-background-1774.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABQBACdASoYAAwAPu1iqU2ppaQiMAgBMB2JZACdMoAC/MDA0npFt33+FdtgAPO5XlBWHj4udFT+muE6rJUIIfkC2LHowdXTpfI8VzwhDRFNZHxDNm1gaTBZ2pndOXOfswsYcsGwPoBcw1J4FT+0Zo60w/K46lHYbqxOBHNhazt33tyerTMuAJdKg5DbhcTpRO08AA=="
+  },
+  "/Pictures/Wyattel%20Story%20Detail%20Background.png": {
+    "width": 1203,
+    "height": 1308,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-story-detail-background-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-story-detail-background-960.webp"
+      },
+      {
+        "w": 1203,
+        "src": "/optimized/pictures/wyattel-story-detail-background-1203.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAABwBgCdASoYABoAPu1oqU+ppaOiKA1RMB2JbACdMuN5a8RswJX1LhBHXehvNyd75zCzy6sp7L9E5muEcVgA9l9RGVR1P/LlHJ8cDFza7iX7SNwHxy3VpcTZr0eGD1X93Jzhlzlv7t9873w1Ji6YC2lTsT2Ou69oPLLuHRN5OuAWD8k2NQCiAswrH69HqywoQJ54zQi1fRfhUsusdYuMuypaZH1C/L3T9+0YpypkYTaxFjsoRetU4VcMLHBjoP91srwc6ZR5o36HeVnDfiXHA0Cl1Gxw4rkJGXZs7gil719Qvt7rqI1jNzk0QEiwYRlSjF8OLRJmvG6esYp3laSRmDna4HH8PPCJWgWfFhWM39fVvhAA"
+  },
+  "/Pictures/Wyattel%20Story%20Main%20Background.png": {
+    "width": 1086,
+    "height": 1448,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-story-main-background-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-story-main-background-960.webp"
+      },
+      {
+        "w": 1086,
+        "src": "/optimized/pictures/wyattel-story-main-background-1086.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAAAwBwCdASoYACAAPuVepU2pJSOiMAwBIByJbACdOUFQFSCj/qWI5wdJv2ASJDqS4kRwD7oP43XvHWMs/J1rDno+LoAAzj1BnuGXNX92vFTW7eZls/Xrg/o9Rr+YYxqaWSRfa5v9WC1wt8g6NT/XCE9EyXo7uQFlBaLwkN+z+4RCf0tsNcD+jLSTsW/SR7ivuXg6/dL3WwqegzeOFCjiOASOwTfapUKAKz3JcnEwXpPvtu6LPhdiTVD3muBoGr67W/Zfxwy1K5Kn1rQbtF5Iz14rvmKPmTwaH5jdeql3wsl0g/Y37sRcUdiwtdFL59uBVIZskpfwSG2T5pCiH2Dd0FCkSu7gY1b2xsXp/eqGneBLJnap/+pD0B8wAAA="
+  },
+  "/Pictures/Wyattel%20Suite%201%20Background.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-suite-1-background-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-suite-1-background-960.webp"
+      },
+      {
+        "w": 1536,
+        "src": "/optimized/pictures/wyattel-suite-1-background-1536.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACwBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoR3ACXBs+6scOs4fn8AXgTUAPY4Ge95g5jyDD215vVAyMvDlNLzHB7vJyqUFIvrk/x4eut20yYWsj/sOeOYScYwcXEgSJax210udb9GPvpJlZwihlO32E8XzSj9bzrXqAnRZUrPJ1YE/ajstCRhesKIKzwZ+OzOhzdOlbK33rkWMDw2ngy3QB1fAAA="
+  },
+  "/Pictures/Wyattel%20Suite%202%20Background.png": {
+    "width": 1512,
+    "height": 1040,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-suite-2-background-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-suite-2-background-960.webp"
+      },
+      {
+        "w": 1512,
+        "src": "/optimized/pictures/wyattel-suite-2-background-1512.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABQBQCdASoYABEAPu1sq1EppaOiqAqpMB2JaACdM2h4wBFzK3sDVyP6tVNV8lctSYXAqgAA8CXXpvKviiSd9SicbBfcqCAhECechZaaIUcPkZYrUSD/pYcg/U8W0wmp42/bbRyPfzicopV4F4kr9t0V1QS35RnnaSei8shHEkpBYLbnfTZ3PlFRSTlp1XEAW49M588z9Ms8AA4gFdVTGL1jyWGdD5SGWM8AfPUEyc7saCafTHcJcaTj9tOACnEnoeCl6J9wgXeAAA=="
+  },
+  "/Pictures/Wyattel%20Suite%20Filipino%20Menu.png": {
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-suite-filipino-menu-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-suite-filipino-menu-960.webp"
+      },
+      {
+        "w": 1536,
+        "src": "/optimized/pictures/wyattel-suite-filipino-menu-1536.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JZgCdMoMYA0l5aoWN5dsHIZ2gAP6RFDZ+NTsFUxl1s1AKd0hOAljUuVRSF542xZsxHIIFUJabfNCWabdM7X2WuKHerEWGvbSHNH7c4AhxLWgYaznnvtgRTAbcUey2/cR1yfkIx4/72pIlEiCPUWXmd4M7OvfTXTxYD+Ujn6IJvActAAA="
+  },
+  "/Pictures/Wyattel%20Suite%20Wedding.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/pictures/wyattel-suite-wedding-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/pictures/wyattel-suite-wedding-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/pictures/wyattel-suite-wedding-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABwBQCdASoYABIAPu1usFIppiSiqAgBMB2JQBWGa0iI+gVxEQa51GQDG3d7/Xx+kj4/i+YAAPx/1ryYjSRKWq3QvokX2oArJ2H5vU6xTygV8i7MtjHbHum4mxnTBUZ3TDFbgK33uZSjc2fn56Ty/IK8umt9ZfGrbXkxsPYLR5VXpxlpGXR2vcM1lnH5sqIj+4nEyIdA92BqRCOQD0SjUHAYKWXOgYy0H4Djno3kLkUNnlqTR4lozaN8AyFOUR9XwAA="
+  },
+  "/Twin%20Suite%20Images/Wyattel%20Suite%20Twin%201.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-1-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-1-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-1-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRuQAAABXRUJQVlA4INgAAACQBQCdASoYABIAPu1qrlCppaQiqAqpMB2JaACdMuIqE0iwWOJP76Axn6nwHa0VxkIdvXtsAAD92mI+UuEY1HI4nJIcCrmhBDrj1CjLpl0/6Yb7cy6Insz+LdxLKIGqhIsBemreZIGb7vEMXwhGhmZbfgJx9UE6cvq3y16Y4AkSVUkfOx1RhkofqFfwmLnuGqi9BLsDtJrsCJSZgxcy3NwsQ0Ll5Bom/8Bn6uS6h6lZpvXAmbmUFGlIg4rgl4WLTqKFRXObD1tXE3Buwjce4je9vAbhjv0sAAA="
+  },
+  "/Twin%20Suite%20Images/Wyattel%20Suite%20Twin%202.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-2-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-2-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-2-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABIAPu1oqU+ppaOjKA1RMB2JQBYj2+AnLUAOvXjT4V3excr6//RPsAD+h+sEt29LG/jtd2RCyeNl3Eq+XEfuGEDK8LBMjEJ8qgoIWzQZ153j4X4KitQVvQdGRBYNl6Vg2a/2OWY6tCC24kcTzKy7KDeCyLpGKfdZe+Q6ckZqEd8QEkhO1Y//hWvdnyXJY3sAAA=="
+  },
+  "/Twin%20Suite%20Images/Wyattel%20Suite%20Twin%203.png": {
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "w": 480,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-3-480.webp"
+      },
+      {
+        "w": 960,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-3-960.webp"
+      },
+      {
+        "w": 1448,
+        "src": "/optimized/twin-suite-images/wyattel-suite-twin-3-1448.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoYABIAPu1usFIppiSiqAgBMB2JZQDCgAtx/O3CKzKlGfKBKbNizotx07y7lYAA/sI0ZI4UZSfkS7TLbW3musPXIVXINujHsFYIkq2IJ4YY+zH1i2TvMbiYFIyKKcx8MpDzIe7N72O3j2VQOqoIcu+g01IYdT7WDUGh7wVGZl+k4vpRTT9/AqaLQqoUhKgf0A8joG6VtAA="
+  }
+}

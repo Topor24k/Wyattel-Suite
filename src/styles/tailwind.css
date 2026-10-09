@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+/*
+  Wyattel design system.
+  Palette drawn from the hotel itself: porcelain navy and gold from the lobby
+  vases, cream walls, and a lacquer red used sparingly as an accent.
+*/
+@theme {
+  /* Only the brand palette exists, so off-palette colours cannot creep in. */
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-navy-950: #0c1e34;
+  --color-navy-900: #142a45;
+  --color-navy-800: #1d3554;
+  --color-navy-700: #2c4566;
+  --color-navy-400: #718eac; /* decorative and large on-navy text only */
+  --color-navy-200: #b9c6d4; /* body text on navy: 9.7:1 on navy-950 */
+
+  --color-cream-50: #faf7f0;
+  --color-cream-100: #f2eee7;
+  --color-cream-200: #e9e2d7;
+  --color-cream-300: #d9cfbf;
+
+  --color-ink: #1a2b3d;       /* body text: 12.5:1 on cream-100 */
+  --color-ink-muted: #4f5d6c; /* secondary text: 5.8:1 on cream-100, 5.2:1 on cream-200 */
+
+  --color-gold-400: #c9ad74; /* text on navy: 7.8:1 on navy-950 */
+  --color-gold-500: #b99a5d; /* rules, icons, borders — never body text on cream */
+  --color-gold-700: #7a5f2a; /* gold text on cream: 5.2:1 on cream-100 */
+
+  --color-lacquer: #a3242a;  /* accent: 6.4:1 on cream-100 */
+
+  --color-danger: #9b2c2c;
+  --color-success: #2f6b4a;
+
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: Montserrat, "Helvetica Neue", Arial, sans-serif;
+
+  /* Type scale. UI steps on a 1.25 ratio; display steps fluid. */
+  --text-tab: 0.6875rem; /* tab bar labels */
+  --text-tab--line-height: 1;
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1.4;
+  --text-eyebrow--letter-spacing: 0.22em;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.65;
+  --text-base: 1rem;
+  --text-base--line-height: 1.7;
+  --text-lede: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-lede--line-height: 1.45;
+  --text-title: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --text-title--line-height: 1.08;
+  --text-heading: clamp(2.5rem, 1.75rem + 3.2vw, 4.75rem);
+  --text-heading--line-height: 0.98;
+  --text-statement: clamp(2rem, 1.3rem + 3vw, 4.25rem);
+  --text-statement--line-height: 1.08;
+  --text-display: clamp(3.75rem, 1.5rem + 9vw, 10.5rem);
+  --text-display--line-height: 0.86;
+
+  --tracking-tight: -0.02em;
+  --tracking-label: 0.18em;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --container-site: 88rem;
+  --container-prose: 40rem;
+
+  --animate-page-in: page-in 280ms var(--ease-out-soft) backwards; /* `backwards`: no lingering transform, which would trap position:fixed children */
+  --animate-fade-in: fade-in 200ms var(--ease-out-soft) backwards;
+  --animate-sheet-in: sheet-in 280ms var(--ease-out-soft) backwards;
+  --animate-sheet-up: sheet-up 280ms var(--ease-out-soft) backwards;
+
+  @keyframes page-in {
+    from { opacity: 0; transform: translateY(0.5rem); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes sheet-in {
+    from { opacity: 0; transform: translateY(1.5rem); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes sheet-up {
+    from { transform: translateY(100%); }
+    to { transform: none; }
+  }
+}
+
+@layer base {
+  html {
+    background: var(--color-navy-950);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    /* App-like touch: no grey flash on tap; controls give their own pressed state. */
+    -webkit-tap-highlight-color: transparent;
+  }
+  a, button, label, summary, [role="button"] { touch-action: manipulation; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    background: var(--color-cream-100);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection {
+    background: var(--color-gold-400);
+    color: var(--color-navy-950);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-500);
+    outline-offset: 3px;
+  }
+  [data-page-heading]:focus { outline: none; }
+  button:not(:disabled), [role="button"]:not([aria-disabled="true"]), summary { cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+
+  /*
+    Scroll reveal, in CSS only: content settles in as it enters the viewport.
+    Browsers without scroll-driven animations simply show it, so text is never
+    left hidden waiting for a script.
+  */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
+      }
+    }
+  }
+  @keyframes reveal {
+    from { opacity: 0; transform: translateY(1rem); }
+    to { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility brand-mark {
+  /* The logo PNG is transparent, so it can be drawn in any colour via a mask. */
+  display: block;
+  background-color: currentColor;
+  -webkit-mask: url('/Logo/wyattel-wordmark.png') center / contain no-repeat;
+  mask: url('/Logo/wyattel-wordmark.png') center / contain no-repeat;
+  aspect-ratio: 1200 / 136;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* A small photo set inline within a headline; scales with the surrounding text. */
+@utility inline-photo {
+  display: inline-block;
+  height: 0.78em;
+  width: 1.7em;
+  border-radius: 9999px;
+  overflow: hidden;
+  vertical-align: -0.06em;
+  & > img { height: 100%; width: 100%; object-fit: cover; }
+}
+
+/* Native date inputs: keep the picker icon legible on cream. */
+@utility date-field {
+  color-scheme: light;
+  &::-webkit-calendar-picker-indicator { opacity: 0.6; cursor: pointer; }
+  &::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+}
+
+/* Notched phones: keep content clear of the status bar and home indicator. */
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+@utility h-safe-top {
+  height: env(safe-area-inset-top);
+}
+
+/* Space under the last content on phones: the tab bar (4rem), breathing room, and the home indicator. */
+@utility pb-tabbar {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+}
+
+/* Bottom sheets stop just short of the top so the page behind stays visible. */
+@utility h-sheet {
+  height: calc(100dvh - 0.75rem - env(safe-area-inset-top));
+}
+@utility max-h-sheet {
+  max-height: calc(100dvh - 3rem - env(safe-area-inset-top));
+}
+
+/* Horizontal card rails on phones: edge-to-edge scrolling that snaps to cards. */
+@utility rail {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+  & > * { scroll-snap-align: start; flex-shrink: 0; }
+}

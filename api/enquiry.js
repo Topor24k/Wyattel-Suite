@@ -1,5 +1,6 @@
 import { enquirySummary } from '../src/utils/enquiries.js'
 import { getStayDates } from '../src/utils/bookingDates.js'
+import { EMAIL_PATTERN, PHONE_PATTERN } from '../src/utils/enquiryRules.js'
 
 const validRooms = new Set(['Deluxe Suite', 'Twin Suite', 'Presidential Suite', 'Matrimonial Suite', 'Family Suite'])
 const validEvents = new Set(['Wedding preparation', 'Private celebration', 'Meeting or group event', 'Dining enquiry'])

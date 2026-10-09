@@ -4,6 +4,7 @@ const createSuiteGallery = (suiteName, photoName) => Array.from({ length: 3 }, (
   caption: `${suiteName} · view ${String(index + 1).padStart(2, '0')}`,
 }))
 
+/** @type {Record<string, import('../types').RoomPhoto[]>} */
 export const suiteGalleries = {
   'Deluxe Suite': createSuiteGallery('Deluxe Suite', 'Deluxe'),
   'Twin Suite': createSuiteGallery('Twin Suite', 'Twin'),
